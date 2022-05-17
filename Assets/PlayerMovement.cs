@@ -2,19 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Vector3Script : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
-    public Vector3 miVector;
-    public GameObject myObject;
+    public Vector3 movementSpeed;
     // Start is called before the first frame update
     void Start()
     {
-        myObject.transform.position = miVector;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        //transform.position += movementSpeed;
+        if (transform.position.x < 10)
+        {
+            transform.position += movementSpeed;
+        }
         
     }
 }
